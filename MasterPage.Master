@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Projekt_zaliczeniowy.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Notatnik wędkarski</title>
+    <link href="Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <div id="Strona">
+        <div id="Naglowek">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo1.jpg" />
+            <div id="Nawigacja"><asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+            </div>
+          
+       </div>
+        <div id="Tresc">
+            
+            <div id="PierwszyObszarBoczny">
+                
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ImageSet="Arrows">
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                    <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                    <ParentNodeStyle Font-Bold="False" />
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+                
+            </div> 
+             
+            <div id="ObszarRoboczy"> <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder> </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

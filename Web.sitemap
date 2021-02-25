@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="" title="Notatnik - menu"  description="">
+		<siteMapNode url="Rejestr.aspx" title="Rejestr połowu"  description="Rejestr połowu" />
+		<siteMapNode url="Home.aspx" title="Rzeki - stan wody"  description="Poziom wody dla wybranych rzek" />
+	</siteMapNode>
+</siteMap>
